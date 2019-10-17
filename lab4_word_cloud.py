@@ -36,19 +36,28 @@ class WordCloud:
             </body>\
             </html>')
 
-
-    # opens the input file gettisburg.txt
-    # remember to open in in the correct mode
-    # reads the file line by line
-    # creates the dictionary containing the word itself
-    # and how often it occurs in a sentence
-    # makes a call to add_to_dict where the dictionary
-    # is actually populated
-    # returns a dictionary
     def create_dict(self):
+        count = 0
         my_dict = {}
-        # your code goes here:
+        my_dict1 = {'name0': 'Eghan', 'name3': 'Adam', 'name4': 'Jack'}
+        word = input('Please input a word to add to the dictionary :')
+        my_dict['property1'] = word
+        print(my_dict)
+        for k, v in my_dict1.items():
+            my_dict[k] = v
+        print(my_dict)
+        string = str(my_dict)
+        print(string)
+        key = input('Please input key to search :')
 
+        if key in string:
+            count += 1
+        else:
+            count = 0
+        print('The number of occurrences of the keyword is ' + str(count))
+
+        print(eval(string), end='dictionary\n')
+        # your code goes here:
         return my_dict
 
     # helper function that is called from
@@ -58,10 +67,6 @@ class WordCloud:
     # if this word already exists. Otherwise sets the
     # word occurance counter to 1
     # returns a dictionary
-    def add_to_dict(self, word, the_dict):
-        # your code goes here
-
-        return the_dict
 
 
 wc = WordCloud()
